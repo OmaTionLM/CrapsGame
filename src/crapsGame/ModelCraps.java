@@ -23,7 +23,7 @@ public class ModelCraps
      */
     private Dice dice1, dice2;
     private int shot, point, state, flag;
-    private String stateToString;
+    private String[] stateToString;
     private int[] faces;
 
     /**
@@ -34,6 +34,7 @@ public class ModelCraps
         dice1=new Dice();
         dice2=new Dice();
         faces=new int[2];
+        stateToString=new String[2];
         flag=0;
     }
 
@@ -95,10 +96,17 @@ public class ModelCraps
             state=4;
             flag=0;
         }
-        if(shot==7)
+        else
         {
-            state = 5;
-            flag = 0;
+            if(shot==7)
+            {
+                state = 5;
+                flag = 0;
+            }
+            else
+            {
+                state=6;
+            }
         }
     }
 
@@ -122,23 +130,35 @@ public class ModelCraps
      * Establish message game state according to state attribute value.
      * @return Message for the View class.
      */
-    public String getStateToString()
+    public String[] getStateToString()
     {
         switch (state)
         {
-            case 1: stateToString="Your number is natural, you win!";
+            case 1: stateToString[0]="First shot = "+shot;
+                    stateToString[1]="Your number is natural, you win!";
             break;
 
-            case 2: stateToString="Your number is craps, you lose!";
+            case 2: stateToString[0]="First shot = "+shot;
+                    stateToString[1]="Your number is craps, you lose!";
             break;
 
-            case 3: stateToString="Your number is point: "+point+ " roll again!" + "\n but if your next number is 7 before "+point+" you'll lose!";
+            case 3: stateToString[0]="First shot = "+shot+ "\nPoint= "+point;
+                    stateToString[1]="Your number is point: "+point+ " roll again!" + "\nbut if your next number is 7 before "+point+" you'll lose!";
             break;
 
-            case 4: stateToString="Your number is "+point+" again, you win!";
+            case 4: stateToString[0]="First shot = "+point+ "\nPoint= "+point
+                                    +"\nNew shot value: "+shot;
+                    stateToString[1]="Your number is "+point+" again, you win!";
             break;
 
-            case 5: stateToString="Your number is 7 before "+point+", you lose!";
+            case 5: stateToString[0]="First shot = "+point+ "\nPoint= "+point
+                                    +"\nNew shot value: "+shot;
+                    stateToString[1]="Your number is 7 before "+point+", you lose!";
+            break;
+
+            case 6: stateToString[0]="First shot = "+point+ "\nPoint= "+point
+                                    +"\nNew shot value: "+shot;
+                    stateToString[1]="\nYour number is point: "+point+ " roll again!" + "\nbut if your next number is 7 before "+point+" you'll lose!";
             break;
         }
         return stateToString;

@@ -21,12 +21,14 @@ public class GUI extends JFrame
             +"\nBut now you'll win if you new number is equal to Point value."
             +"\nWithout previously your number has been 7.";
 
+    private int flag;
     private Header headerProject;
     private JLabel dice1, dice2;
     private JButton launch;
     private JPanel dicePanel, resultsPanel;
     private ImageIcon diceImage;
-    private JTextArea results;
+    private JTextArea outMessage, diceResults;
+    private JSeparator separator;
     private Listener listener;
     private ModelCraps modelCraps;
 
@@ -79,11 +81,23 @@ public class GUI extends JFrame
 
         this.add(dicePanel, BorderLayout.CENTER);
 
-        results=new JTextArea(7,31);
-        results.setText(MESSAGE_BEGINNING);
-        results.setBorder(BorderFactory.createTitledBorder("What should you do?"));
-        JScrollPane scroll=new JScrollPane(results);
-        this.add(scroll,BorderLayout.EAST);
+        outMessage=new JTextArea(7,31);
+        outMessage.setText(MESSAGE_BEGINNING);
+        //outMessage.setBorder(BorderFactory.createTitledBorder("What should you do?"));
+        JScrollPane scroll=new JScrollPane(outMessage);
+
+        resultsPanel=new JPanel();
+        resultsPanel.setBorder(BorderFactory.createTitledBorder("What should you do?"));
+        resultsPanel.add(scroll);
+        resultsPanel.setPreferredSize(new Dimension(370, 180));
+
+
+        this.add(resultsPanel,BorderLayout.EAST);
+
+        diceResults=new JTextArea(4,31);
+        separator=new JSeparator();
+        separator.setPreferredSize(new Dimension(320, 7));
+        separator.setBackground(Color.GREEN);
     }
 
     /**
@@ -107,6 +121,8 @@ public class GUI extends JFrame
         @Override
         public void actionPerformed(ActionEvent e)
         {
+            flag=0;
+
             modelCraps.calculateShot();
             int[] faces=modelCraps.getFaces();
             diceImage=new ImageIcon(getClass().getResource("/resources/"+faces[0]+".png"));
@@ -115,8 +131,23 @@ public class GUI extends JFrame
             dice2.setIcon(diceImage);
 
             modelCraps.determinateGame();
-            results.setText(modelCraps.getStateToString());
 
+            if(flag==0)
+            {
+                resultsPanel.removeAll();
+                resultsPanel.setBorder(BorderFactory.createTitledBorder("Results"));
+                resultsPanel.add(diceResults);
+                resultsPanel.add(separator);
+                resultsPanel.add(outMessage);
+                flag=1;
+            }
+
+            diceResults.setText(modelCraps.getStateToString()[0]);
+            outMessage.setRows(4);
+            outMessage.setText(modelCraps.getStateToString()[1]);
+
+            revalidate();
+            repaint();
         }
     }
 }
