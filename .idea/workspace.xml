@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01de7c2e-7e20-4332-b9d6-04cd50d8ef26" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crapsGame/ModelCraps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/crapsGame/ModelCraps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crapsGame/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/crapsGame/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +72,15 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CrapsGame" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="crapsGame.GUI" />
+      <module name="GUITemplate" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
