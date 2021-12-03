@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class GUI extends JFrame
 {
-    public static final String MESSAGE_BEGINNING="Welcome to Craps \n"
+    public static final String BEGINNING_MESSAGE="Welcome to Craps \n"
             +"Push the button 'Launch' to start the game."
             +"\nIf you starting shot is 7 or 11 you win with Natural."
             +"\nIf you starting shot is 2, 3 or 12 you lose with Craps."
@@ -82,7 +82,7 @@ public class GUI extends JFrame
         this.add(dicePanel, BorderLayout.CENTER);
 
         outMessage=new JTextArea(7,31);
-        outMessage.setText(MESSAGE_BEGINNING);
+        outMessage.setText(BEGINNING_MESSAGE);
         //outMessage.setBorder(BorderFactory.createTitledBorder("What should you do?"));
         JScrollPane scroll=new JScrollPane(outMessage);
 
