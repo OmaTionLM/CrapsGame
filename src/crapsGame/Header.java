@@ -5,16 +5,18 @@ import java.awt.*;
 
 /**
  * This class is a kind of JLabel used to create a personalized Header for the project
- * @autor Paola-J Rodriguez-C paola.rodriguez@correounivalle.edu.co
- * @version @version v.1.0.0 date:21/11/2021
+ * @autor Alan Valderrama alan.valderrama@correounivalle.edu.co
+ * @version @version v.1.0.0 date:03/12/2021
  */
-public class Header extends JLabel {
+public class Header extends JLabel
+{
     /**
      * Constructor of the Header class
      * @param title String that contains Header text
      * @param colorBackground Color object to be assigned for the Header background
      */
-    public Header(String title, Color colorBackground){
+    public Header(String title, Color colorBackground)
+    {
         this.setText(title);
         this.setBackground(colorBackground);
         this.setForeground(new Color(255,255,255));

@@ -31,7 +31,7 @@ public class GUIGridBagLayout extends JFrame
         //Default JFrame configuration
         this.setTitle("Craps Game");
         this.setUndecorated(true);
-        this.setBackground(new Color(255,255,255,0));
+        this.setBackground(new Color(255,255,255,255));
         this.pack();
         this.setResizable(true);
         this.setVisible(true);
@@ -80,7 +80,7 @@ public class GUIGridBagLayout extends JFrame
         dice2=new JLabel(diceImage);
 
         dicePanel=new JPanel();
-        dicePanel.setPreferredSize(new Dimension(200, 80));
+        dicePanel.setPreferredSize(new Dimension(300, 300));
         dicePanel.setBorder(BorderFactory.createTitledBorder("Your dice."));
         dicePanel.add(dice1);
         dicePanel.add(dice2);
