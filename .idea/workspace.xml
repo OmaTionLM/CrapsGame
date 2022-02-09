@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01de7c2e-7e20-4332-b9d6-04cd50d8ef26" name="Changes" comment="" />
+    <list default="true" id="01de7c2e-7e20-4332-b9d6-04cd50d8ef26" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IdeaProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JuegoCraps/src/juegoCraps/Dado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JuegoCraps/src/juegoCraps/ModelCraps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/template-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/myProject/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/myProject/Header.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crapsGame/GUIGridBagLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/crapsGame/GUIGridBagLayout.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +48,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.GUIGridBagLayout">

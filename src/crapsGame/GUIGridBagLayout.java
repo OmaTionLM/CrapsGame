@@ -24,6 +24,7 @@ public class GUIGridBagLayout extends JFrame
     private JTextArea outMessage, diceResults;
     private Listener listener;
     private ModelCraps modelCraps;
+    private int cambioTefa;
 
     public GUIGridBagLayout()
     {
